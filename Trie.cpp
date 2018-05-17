@@ -70,8 +70,7 @@ int main()
     cin.tie(nullptr);
 
     enter();
-    cout << node + 1;
-    //solve();
+    solve();
 
     return 0;
 }
