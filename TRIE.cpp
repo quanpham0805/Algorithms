@@ -129,8 +129,8 @@ int main()
     #endif
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    freopen ("TRIE.INP", "r", stdin);
-    freopen ("TRIE.OUT", "w", stdout);
+    //freopen ("TRIE.INP", "r", stdin);
+    //freopen ("TRIE.OUT", "w", stdout);
 
     Init();
 
