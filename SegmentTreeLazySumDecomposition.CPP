@@ -115,8 +115,6 @@ int main()
     #endif
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    freopen ("SCOMP.INP", "r", stdin);
-    freopen ("SCOMP.OUT", "w", stdout);
 
     enter();
     char type; int x, k;
