@@ -77,8 +77,6 @@ int main()
     #endif
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    freopen ("QUERYSUM.INP", "r", stdin);
-    freopen ("QUERYSUM.OUT", "w", stdout);
 
     cin >> n >> m;
     memset(a, 0, sizeof(a));
