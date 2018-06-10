@@ -1,3 +1,7 @@
+/*
+ *Update: update a segment of array
+ *Query: Query max from 1 segment of array
+ */
 #include    <bits/stdc++.h>
 #define     ll long long
 #define     ull unsigned long long
