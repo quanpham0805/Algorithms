@@ -93,7 +93,7 @@ void Del(struct TrieNode *root, string key, int level)
 void Init()
 {
 	int n; struct TrieNode *root = getNode();
-	string keys[] = {"i", "love", "nguyen", "ha", "phuong", "abcde", "ggwp"};
+	string keys[] = {"i", "love", "one", "two", "three", "abcde", "ggwp"};
 	string toDel[] = {"abcde", "ggwp", "others"};
 
 	//inserting
@@ -102,9 +102,9 @@ void Init()
 	cout << '\n';
 
 	//searching
-	if (search(root, "phuong")) cout << "Quan\n";
+	if (search(root, "one")) cout << "1\n";
 	else cout << "-1\n";
-	if (search(root, "ng")) cout << "X\n";
+	if (search(root, "ng")) cout << "1\n";
 	else cout << "-1\n";
 	cout << '\n';
 
