@@ -26,7 +26,8 @@ ofstream output;
 
 void make_input()
 {
-
+    testno ++;
+    cout << testno << '\n';
 }
 
 void make_output()
