@@ -85,8 +85,8 @@ void Del(struct TrieNode *root, string key, int level)
 	Del(root->children[id], key, level + 1);
 	if (checkForDeleting(root->children[id]))
 	{
-		root->children[id] = NULL;
 		delete root->children[id];
+		root->children[id] = NULL;
 	}
 }
 
