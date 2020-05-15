@@ -1,2 +1,2 @@
 # CompetitiveProgramming
-1 vài thuật toán xàm
+Algorithms and optimizations for competitive programming
