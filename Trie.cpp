@@ -91,25 +91,27 @@ bool emptyNode(Trie* trie) {
 	return childrenCount == 0;
 }
 
-void deletion(Trie* trie, string value, int index = 0) {
+void deletionHelper(Trie* trie, string value, int index = 0) {
 	if (index == value.length())
 		return;
 
 	int keySlot = charToInt(value[index]);
-	deletion(trie->children[keySlot], value, index + 1);
-	if (emptyNode(trie->children[keySlot]))
-		delete trie->children[keySlot], trie->children[keySlot] = nullptr;
+	deletionHelper(trie->children[keySlot], value, index + 1);
+	if (emptyNode(trie->children[keySlot])) {
+		delete trie->children[keySlot];
+		trie->children[keySlot] = nullptr;
+	}
 }
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+void deletion(Trie* trie, string value) {
+	if (search(trie, value))
+		deletionHelper(trie, value);
+}
 
-    int n; Trie *root = new Trie();
+void example() {
+	int n; Trie *root = new Trie();
     string keys[] = {"i", "love", "one", "two", "three", "abcde", "ggwp"};
 	string toDel[] = {"abcde", "ggwp", "others"};
-
 
 	cout << "-----------\n";
 	//inserting
@@ -130,11 +132,17 @@ int main()
 	//deleting
 	int q = 3;
 	for (int i = 0 ; i < q ; i ++)
-	if (search(root, toDel[i]))
 		deletion(root, toDel[i]);
 	printAll(root);//to check
 	cout << '\n';
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    example();
 
     return 0;
 }
-
